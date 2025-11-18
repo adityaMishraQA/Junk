@@ -16,7 +16,7 @@ pipeline{
         stage('stage:3 --> Tear down'){
             steps {
                 echo "3 ------> Task"
-                echo "Current dir using pwd(): ${pwd()}"
+                echo "Current dir content: ${ls()}"
             }
         }
     }
