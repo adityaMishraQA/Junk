@@ -16,5 +16,10 @@ pipeline{
                 echo "3 ------> Task"
             }
         }
+	stage('Wow Noob'){
+            steps{
+                echo "4 ------> Task"
+            }
+        }
     }
 }
