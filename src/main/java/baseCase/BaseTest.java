@@ -64,6 +64,7 @@ public class BaseTest {
             DriverSetup.setDriverThreadLocal(new FirefoxDriver());
 
         }
+
         DriverSetup.getDriver().manage().window().maximize();
         DriverSetup.getDriver().get(properties.getProperty("test_url"));
 
