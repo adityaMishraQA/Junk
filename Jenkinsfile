@@ -13,10 +13,10 @@ pipeline{
                 bat "mvn test"
             }
         }
-        stage('stage:3 --> Tear down'){
+        stage('stage:3 --> Display results'){
             steps {
                 echo "3 ------> Task"
-                echo "Current dir content: ${ls()}"
+                bat 'type target\\surefire-reports\\TestSuite.txt'
             }
         }
     }
