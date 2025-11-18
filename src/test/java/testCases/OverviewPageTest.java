@@ -29,7 +29,6 @@ public class OverviewPageTest extends BaseTest {
         labPage.addCartFeature("Sauce Labs Bolt T-Shirt");
         labPage.addCartFeature("Sauce Labs Fleece Jacket");
         yourCartPage=labPage.clickOnCart();
-        Thread.sleep(2000);
         informationPage=yourCartPage.checkoutButton();
         overviewPage=informationPage.informationDetails();
         overviewPage.finalCheckout();

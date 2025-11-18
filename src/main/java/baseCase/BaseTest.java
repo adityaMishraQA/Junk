@@ -55,8 +55,10 @@ public class BaseTest {
 
         if (properties.getProperty("browser").equalsIgnoreCase("Chrome"))
         {
-            WebDriverManager.chromedriver().setup();
-            DriverSetup.setDriverThreadLocal(new ChromeDriver());
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--incognito");
+            options.addArguments("--disable-features=PasswordLeakDetection");
+            DriverSetup.setDriverThreadLocal(new ChromeDriver(options));
 
         }
         else if (properties.getProperty("browser").equalsIgnoreCase("Edge")) {
