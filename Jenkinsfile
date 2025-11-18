@@ -1,22 +1,25 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage('BesantProject'){
-            steps{
+
+    stages {
+        stage('BesantProject') {
+            steps {
                 echo "1 ----> Task"
-		sh "mvn test"
+                bat "mvn test"
             }
         }
-        stage('1st try'){
-            steps{
+
+        stage('1st try') {
+            steps {
                 echo "2 -----> Task"
-		sh "mvn test"
+                bat "mvn test"
             }
         }
-        stage('SauceDemo WebSite Automation'){
-            steps{
+
+        stage('SauceDemo WebSite Automation') {
+            steps {
                 echo "3 ------> Task"
-		sh "mvn test"
+                bat "mvn test"
             }
         }
     }
