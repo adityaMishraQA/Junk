@@ -1,22 +1,20 @@
 pipeline{
     agent any
     stages{
-        stage('stag:1 --> cleaning project'){
-            steps {
-                echo "1 ----> Task"
-                bat "mvn clean"
+        stage('First Job'){
+            steps{
+                echo "Running 1st"
+                script{
+                    build job: '1st try'
+                }
             }
         }
-        stage('stage:2 --> Running Smoke Test'){
-            steps {
-                echo "2 -----> Task"
-                bat "mvn test"
-            }
-        }
-        stage('stage:3 --> Display results'){
-            steps {
-                echo "3 ------> Task"
-                bat 'type target\\surefire-reports\\TestSuite.txt'
+        stage('Second Job'){
+            steps{
+                echo "Running 2nd"
+                script{
+                    build job: 'BesantProject'
+                }
             }
         }
     }
